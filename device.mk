@@ -11,6 +11,10 @@ $(call inherit-product, device/xiaomi/sm8450-common/common.mk)
 $(call inherit-product, vendor/xiaomi/cupid/cupid-vendor.mk)
 
 # Overlay
+DEVICE_PACKAGE_OVERLAYS += \
+    $(LOCAL_PATH)/overlay \
+    $(LOCAL_PATH)/overlay-derp
+
 PRODUCT_PACKAGES += \
     ApertureResCupid \
     FrameworksResCupid \
