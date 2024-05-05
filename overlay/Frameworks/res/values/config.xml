@@ -411,4 +411,6 @@
          black in software (to avoid aliasing or emulate a cutout that is not physically existent).
          -->
     <bool name="config_fillMainBuiltInDisplayCutout">true</bool>
+    <!-- Whether devices suports in-display fingerprint when screen is off -->
+    <bool name="config_supportScreenOffUdfps">true</bool>
 </resources>
