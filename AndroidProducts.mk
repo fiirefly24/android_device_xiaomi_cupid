@@ -5,4 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_cupid.mk
+    $(LOCAL_DIR)/derp_cupid.mk
+
+COMMON_LUNCH_CHOICES := \
+    derp_cupid-user \
+    derp_cupid-userdebug \
+    derp_cupid-eng

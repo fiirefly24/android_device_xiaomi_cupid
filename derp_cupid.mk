@@ -8,9 +8,17 @@
 $(call inherit-product, device/xiaomi/cupid/device.mk)
 
 # Inherit from common lineage configuration
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+TARGET_DISABLE_EPPE := true
+$(call inherit-product, vendor/derp/config/common_full_phone.mk)
 
-PRODUCT_NAME := lineage_cupid
+# Inherit some common DerpFest stuff
+TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_NOT_USES_BLUR := true
+TARGET_USES_MINI_GAPPS := true
+TARGET_SUPPORTS_QUICK_TAP := true
+EXTRA_UDFPS_ICONS := true
+
+PRODUCT_NAME := derp_cupid
 PRODUCT_DEVICE := cupid
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := Xiaomi
@@ -25,5 +33,7 @@ PRODUCT_SYSTEM_DEVICE := cupid
 #    TARGET_PRODUCT=$(PRODUCT_SYSTEM_NAME)
 
 BUILD_FINGERPRINT := Xiaomi/cupid_global/cupid:14/UKQ1.230917.001/V816.0.6.0.ULCMIXM:user/release-keys
+
+PRODUCT_SYSTEM_PROPERTIES += ro.build.fingerprint=$(BUILD_FINGERPRINT)
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
