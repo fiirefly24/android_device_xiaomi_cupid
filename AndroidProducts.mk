@@ -5,4 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_cupid.mk
+    $(LOCAL_DIR)/pixelage_cupid.mk
+
+COMMON_LUNCH_CHOICES := \
+    pixelage_cupid-user \
+    pixelage_cupid-userdebug \
+    pixelage_cupid-eng
