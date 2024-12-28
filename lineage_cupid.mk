@@ -10,6 +10,18 @@ $(call inherit-product, device/xiaomi/cupid/device.mk)
 # Inherit from common lineage configuration
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
+# Boot Animation 
+TARGET_BOOT_ANIMATION_RES := 1080
+
+# RisingOS Flags
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    RisingChipset="Snapdragon 8 Gen 1" \
+    RisingMaintainer="Fikri"
+
+TARGET_ENABLE_BLUR := true
+WITH_GMS := true
+TARGET_DEFAULT_PIXEL_LAUNCHER := true
+
 PRODUCT_NAME := lineage_cupid
 PRODUCT_DEVICE := cupid
 PRODUCT_MANUFACTURER := Xiaomi
