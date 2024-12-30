@@ -18,6 +18,7 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     RisingChipset="Snapdragon 8 Gen 1" \
     RisingMaintainer="Fikri"
 
+TARGET_HAS_UDFPS := true
 TARGET_ENABLE_BLUR := true
 WITH_GMS := true
 TARGET_DEFAULT_PIXEL_LAUNCHER := true
