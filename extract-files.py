@@ -44,6 +44,10 @@ blob_fixups: blob_fixups_user_type = {
         'vendor/etc/camera/pureShot_parameter.xml',
         'vendor/etc/camera/pureView_parameter.xml',
     ): blob_fixup().regex_replace(r'=([0-9]+)>', r'="\1">'),
+    'vendor/lib64/hw/fingerprint.goodix_fod.default.so': blob_fixup().binary_regex_replace(
+        b'/sys/class/touch/touch_dev/fod_press_status',
+        b'/sys/class/touch/touch_dev/fod_finger_state',
+    ),
     'vendor/lib64/libcamximageformatutils.so': blob_fixup().replace_needed(
         'vendor.qti.hardware.display.config-V2-ndk_platform.so',
         'vendor.qti.hardware.display.config-V2-ndk.so',
